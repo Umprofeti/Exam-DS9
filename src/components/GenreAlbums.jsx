@@ -91,8 +91,9 @@ const GenreAlbums = ({ addToCart }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] flex flex-col items-center relative mt-24">
-      <h1 className="text-4xl text-[#F1A512] mb-8 mt-4 font-lily" style={{ textShadow: '2px 2px 0 #8c0027' }}>
+    <div className="p-6 bg-white">
+    <div className="min-h-screen bg-white flex flex-col items-center relative mt-24">
+      <h1 className="text-4xl text-customYellow mb-8 mt-4 font-lily" style={{ textShadow: '2px 2px 0 #8c0027' }}>
       Álbum de {genre}
       </h1>
       {showConfirmation && (
@@ -113,6 +114,7 @@ const GenreAlbums = ({ addToCart }) => {
                 className="w-64 h-64 object-cover relative z-1"
               />
             </div>
+            
             <div className="flex-1 ml-4">
               <h2 className="text-2xl font-bold mb-2 font-lily">{selectedAlbum.title}</h2>
               <p className="text-sm text-gray-600 mb-2 font-lilita">{selectedAlbum.artist}</p>
@@ -174,7 +176,7 @@ const GenreAlbums = ({ addToCart }) => {
                   <h2 className="text-xl font-bold mb-2 font-lily">{album.title}</h2>
                   <p className="text-sm text-gray-600 mb-2 font-lilita">{album.artist}</p>
                   <p className="text-sm text-gray-600 mb-2 font-lilita">{album.releaseDate}</p>
-                  <button className="bg-[#F1A512] text-[#00000] px-4 py-2 rounded-lg font-lily" onClick={() => handleAcquire(album)}>
+                  <button className="bg-customYellow text-[#00000] px-4 py-2 rounded-lg font-lily" onClick={() => handleAcquire(album)}>
                     Adquirir
                   </button>
                 </div>
@@ -183,6 +185,7 @@ const GenreAlbums = ({ addToCart }) => {
           </div>
         </>
       )}
+    </div>
     </div>
   );
 };

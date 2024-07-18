@@ -3,6 +3,7 @@ import noOrdersImage from '../img/noorders.png';
 
 const Orders = ({ orders }) => {
   return (
+    <div className="p-6 bg-white">
     <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg ">
       <h2 className="text-2xl font-bold mb-6 text-center font-lilita mt-24" >Pedidos</h2>
       {orders.length === 0 ? (
@@ -24,6 +25,7 @@ const Orders = ({ orders }) => {
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 };

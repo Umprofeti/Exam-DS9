@@ -6,7 +6,7 @@ const MetodoPago = () => {
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg">
 
         <h2 className="text-2xl font-bold mb-6 text-center font-lilita mt-24">Cuenta</h2>
-        <div className="bg-[#272727]  text-white p-6 rounded-lg flex items-center">
+        <div className="bg-customDark  text-white p-6 rounded-lg flex items-center">
           <div className="flex-shrink-0">
             <img className="w-24 h-24 rounded-full" src="ruta/a/tu/imagen.jpg" alt="User Avatar" />
           </div>
@@ -52,7 +52,7 @@ const MetodoPago = () => {
         </div>
 
         <h2 className="text-2xl font-bold mt-10 mb-6 text-center font-lilita">Método de pago</h2>
-        <div className="bg-[#272727] text-white p-6 rounded-lg flex items-center">
+        <div className="bg-customDark text-white p-6 rounded-lg flex items-center">
           <div className="flex-shrink-0">
             <img className="w-32 h-20" src="ruta/a/tu/tarjeta.jpg" alt="Credit Card" />
           </div>

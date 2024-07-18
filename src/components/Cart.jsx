@@ -2,12 +2,12 @@ import React from 'react';
 
 const Cart = ({ cartItems, removeFromCart, recommendedAlbums, handleAcquire }) => {
   return (
-    <div className="min-h-screen bg-[#2BAF90] flex flex-col items-center relative">
+    <div className="min-h-screen bg-white  flex flex-col items-center relative">
       <h1 className="text-4xl text-[#F1A512] mb-8 mt-24 font-lily" style={{ textShadow: '2px 2px 0 #8c0027' }}>
         Tu Carrito
       </h1>
       {cartItems.length === 0 ? (
-        <p className="text-2xl text-white mb-4">Tu carrito está vacío</p>
+        <p className="text-2xl text-black mb-4 font-lilita">Tu carrito está vacío</p>
       ) : (
         <div className="w-full px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {cartItems.map((album) => (
@@ -24,7 +24,7 @@ const Cart = ({ cartItems, removeFromCart, recommendedAlbums, handleAcquire }) =
           ))}
         </div>
       )}
-      <h2 className="text-3xl text-[#F1A512] mt-8 mb-4 font-lily" style={{ textShadow: '2px 2px 0 #8c0027' }}>
+      <h2 className="text-3xl text-customYellow mt-8 mb-4 font-lily" style={{ color:'#f1a512' ,textShadow: '2px 2px 0 #8c0027' }}>
       Pensamos que te gustaría...
       </h2>
       <div className="w-full px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -34,7 +34,7 @@ const Cart = ({ cartItems, removeFromCart, recommendedAlbums, handleAcquire }) =
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2 font-lily">{album.title}</h2>
               <p className="text-sm text-gray-600 mb-2 font-lilita">{album.artist}</p>
-              <button className="bg-[#F1A512] text-[#000000] px-4 py-2 rounded-lg font-lily" onClick={() => handleAcquire(album)}>
+              <button className="bg-customYellow px-4 py-2 rounded-lg font-lily" onClick={() => handleAcquire(album)}>
                 Adquirir
               </button>
             </div>

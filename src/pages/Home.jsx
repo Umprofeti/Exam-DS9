@@ -4,13 +4,9 @@ import styles from './Home.module.css';
 const Home = () => {
   return (
     <div className={styles['home-container']}>
-       <main className="flex flex-row items-center justify-between px-8 mt-[7rem]">
+      <main className="flex flex-row items-center justify-between px-8 mt-[7rem]">
         <div className="flex flex-col gap-3 justify-center items-center">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Leckerli+One&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet"/>
- <h1 className={`${styles.title} font-leckerli`}>
+          <h1 className={`${styles.title} font-leckerli`}>
             Groovy
           </h1>
           <p className={`${styles.description} font-lilita`}>

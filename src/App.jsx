@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 
-import Home from './pages/Home';
-import Formulario from './pages/Formulario';
-import Navbar from './components/Navbar';
-import MusicGenres from './components/MusicGenres';
-import GenreAlbums from './components/GenreAlbums';
-import Sidebar from './components/SidebarMenu';
-import Cart from './components/Cart';
-import MetodoPago from './components/MetodoPago';
-import Orders from './components/Orders';
-import Chatbot from './components/chatbot'; // Asegúrate de tener la ruta correcta
+import Home from './pages/Home.jsx';
+import Formulario from './pages/Formulario.jsx';
+import Navbar from './components/Navbar.jsx';
+import MusicGenres from './components/MusicGenres.jsx';
+import GenreAlbums from './components/GenreAlbums.jsx';
+import Sidebar from './components/SidebarMenu.jsx';
+import Cart from './components/Cart.jsx';
+import MetodoPago from './components/MetodoPago.jsx';
+import Orders from './components/Orders.jsx';
+import Chatbot from './components/chatbot.jsx';
 
 const App = () => {
   const [user, setUser] = useState({
@@ -76,9 +76,10 @@ const App = () => {
         <Route path="/orders" element={<Orders orders={orders} />} />
         <Route path="/metodo-pago" element={<MetodoPago />} />
       </Routes>
-      <Chatbot /> {/* Coloca el componente Chatbot fuera de <Routes> */}
+      <Chatbot /> 
     </Router>
   );
 };
 
 export default App;
+
