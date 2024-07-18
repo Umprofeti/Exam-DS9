@@ -1,0 +1,44 @@
+
+
+.navbar-bg {
+  background-color: #272727; 
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  color: #F1A512;
+  font-size: 25px;
+  border-radius: 1.8em;
+  box-shadow: 0.2em 0.2em #8C0027; 
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+.custom-text-shadow {
+  display: inline-block;
+  text-shadow: 2px 2px 0 #8C0027; 
+}
+
+.custom-text-shadow1 {
+  display: inline-block;
+  text-shadow: 9px 9px 0 #8C0027; 
+}
+
+.text-customYellow {
+  color: #F1A512; 
+  font-family: 'Lilita One', sans-serif;
+}
+
+.hover:text-customvino:hover {
+  color: #f8ddc1; 
+}
+
+.link {
+  transition: color 0.3s; 
+}
+
+.link:hover {
+  color: #f8ddc1; 
+}
+
+.activeLink {
+  color: #f8ddc1; 
+}

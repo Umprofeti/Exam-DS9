@@ -1,0 +1,88 @@
+.sidebar {
+  font-family: 'Lily Script One', cursive;
+  position: fixed;
+  top: 10rem; 
+  left: -250px;
+  width: 210px;
+  height: calc(100vh - 17rem); 
+  background: #272727;
+  transition: transform 0.8s ease;
+  z-index: 1000;
+  border-radius: 1.8em;
+  border-bottom-left-radius: 0;
+  box-shadow: 0.2em 0.2em rgb(140, 0, 39);
+}
+
+.sidebar.open {
+  transform: translateX(250px);
+  border-radius: 100;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #272727;
+  border-top-right-radius: 1.8em;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.username {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 6rem; 
+  left: 1rem;
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  opacity: 0.8;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 1.8em; 
+}
+
+.sidebar-menu li:hover {
+  background-color: #F1A512;
+  transform: translateX(5px) scale(1.05);
+  box-shadow: 0.2em 0.2em rgb(140, 0, 39);
+  border-radius: 1.8em;
+  color: #000000;
+}
+
+.sidebar-menu li svg {
+  margin-right: 0.5rem;
+}
