@@ -1,0 +1,103 @@
+
+.home-container {
+  background-color: #f1a512; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.title {
+  font-size: 10rem; 
+  color: #f8ddc1; 
+  font-family: 'Leckerli One', cursive; 
+  text-shadow: 2px 14px 0 #8c0027; 
+  margin-bottom: 2rem;
+}
+
+.description {
+  max-width: 800px; 
+  font-size: 1.2rem;
+  color: #f8ddc1; 
+  margin-bottom: 2rem;
+  text-align: left;
+  font-family: 'Lilita One', sans-serif; 
+}
+
+.button {
+  padding: 1rem 2rem; 
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #1e1e1e; 
+  background-color: #a1d4b1; 
+  border: none; 
+  border-radius: 0.5rem; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  font-family: 'Lily Script One', 'sans-serif'; 
+}
+
+.button:hover {
+  background-color: #8C0027; 
+  color: white; 
+}
+
+.vinyl-image {
+  width: 400px; 
+  height: auto; 
+  margin-top: 2rem;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/main/noise.gif') center center / cover;
+  opacity: 0.1; 
+  pointer-events: none; 
+  mix-blend-mode: soft-light;
+  z-index: 3; 
+}
+
+button {
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border-radius: 0.4em;
+  box-shadow: 0.2em 0.2em rgb(140, 0, 39);
+  cursor: pointer;
+  z-index: 1;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em rgb(140, 0, 39);
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em rgb(140, 0, 39);
+}
+
+.vinyl-image {
+  width: 400px;
+  animation: rotate 6s linear infinite;
+  display: block; 
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
