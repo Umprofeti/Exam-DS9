@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './Home.module.css';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
-    <div className={styles['home-container']}>
+    <div id='home' className={styles['home-container']}>
       <main className="flex flex-row items-center justify-between px-8 mt-[7rem]">
+        <Navbar />
         <div className="flex flex-col gap-3 justify-center items-center">
           <h1 className={`${styles.title} font-leckerli`}>
             Groovy

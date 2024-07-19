@@ -55,8 +55,8 @@ const MusicGenres = () => {
   };
 
   return (
-<div className="min-h-screen body-green relative">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <div className="min-h-screen body-green relative">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Leckerli+One&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Lilita+One&display=swap" rel="stylesheet"/>

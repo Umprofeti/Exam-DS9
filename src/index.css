@@ -23,7 +23,7 @@
 }
 
 
-body::before {
+#home::before {
     content: "";
     position: fixed;
     top: 0;
