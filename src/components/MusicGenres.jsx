@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -6,6 +6,9 @@ import 'swiper/css/effect-creative';
 import { Navigation, EffectCreative } from 'swiper/modules';
 import './MusicGenres.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Navbar from './Navbar';
+
 
 const MusicGenres = () => {
   const navigate = useNavigate();
@@ -51,16 +54,38 @@ const MusicGenres = () => {
   }, []);
 
   const handleGenreClick = (genre) => {
-    navigate(`/genre/${genre}`);
+    navigate(`/pages/formulario`);
   };
+  const [response,setResponse]=useState()
+  useEffect(()=>{
+  axios.get('http://localhost:3000/api/globals/landing?locale=undefined&draft=false&depth=1')
+          .then(res=>{
+            setResponse(res.data)
+            console.log(res.data)
+          })
+  },[])
 
-  return (
-    <div className="min-h-screen body-green relative">
+  function carrusel(Itemcarrusel){
+    console.log(Itemcarrusel)
+    let generosmusicales=[]
+  Itemcarrusel.map((obj, index)=>{
+    
+    generosmusicales=[...generosmusicales,obj.NombreDelGenero]
+  })
+
+  return generosmusicales
+
+  }
+  
+  
+
+  return ( 
+    <div id="home" className="min-h-screen body-green relative">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
       <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Leckerli+One&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Lilita+One&display=swap" rel="stylesheet"/>
-
+      <Navbar/>
       <h1 className="my-carousel__title absolute text-[3em] text-[#F1A512] text-center left-1/2 top-[-10%] transform -translate-x-1/2 z-20">Géneros</h1>
 
       <div className="vinyl-container fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[1000px] h-[500px] overflow-hidden z-10">
@@ -97,12 +122,18 @@ const MusicGenres = () => {
             },
           }}
         >
-          {['Rock', 'Pop', 'Hip-Hop', 'Electronic', 'Jazz', 'Classical', 'Country', 'R&B', 'Latin', 'Reggae'].map((genre, index) => (
-            <SwiperSlide key={index} className={`swiper-card swiper-card--${index + 1}`} onClick={() => handleGenreClick(genre)}>
-              <div>{genre}</div>
-            </SwiperSlide>
-          ))}
+
+          {
+            response && <>{carrusel(response.Interfaz[1].ItemsCarrusel).map((genre, index) => (
+              <SwiperSlide key={index} className={`swiper-card swiper-card--${index + 1}`} onClick={() => handleGenreClick(genre)}>
+                <div>{genre}</div>
+              </SwiperSlide>
+            ))}</>
+          }
         </Swiper>
+        
+
+
 
         <div className="my-carousel__actions absolute bottom-0 left-0 w-full flex justify-center items-center z-10">
           <button className="btn my-carousel__control my-carousel__control--prev text-white bg-[#F1A512] rounded-full p-4 text-2xl font-medium transition-colors duration-800 ease-in-out">←</button>

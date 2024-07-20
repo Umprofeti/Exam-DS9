@@ -13,6 +13,8 @@ import MetodoPago from './components/MetodoPago.jsx';
 import Orders from './components/Orders.jsx';
 import { SearchResults } from './pages/SearchResults.jsx';
 import InspectAlbum from './pages/InspectAlbum.jsx';
+import { RutaProtegida } from './components/ProtectectRoute.jsx';
+import { Dashboard } from './pages/Dashboard.jsx';
 
 const App = () => {
 
@@ -53,13 +55,14 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/pages/formulario" element={<Formulario />} />
         <Route path="/components/MusicGenres" element={<MusicGenres />} />
-        <Route path="/genre/:genre" element={<GenreAlbums addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={recommendedAlbums} />} />
-        <Route path="/orders" element={<Orders orders={orders} />} />
+        <Route path="/genre/" element={<GenreAlbums addToCart={addToCart} />} />
+        {/* <Route path="/cart" element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={recommendedAlbums} />} />
+        <Route path="/orders" element={<Orders orders={orders} />} /> */}
         <Route path="/metodo-pago" element={<MetodoPago />} />
         <Route path='/user/search/album/:q' element={<SearchResults/>}/>
         <Route path='/user/details/album/:id' element={<InspectAlbum />}/>
-        <Route path='/user/cart' element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={recommendedAlbums} />}/>
+        <Route path='/user/cart' element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={[]} />}/>
+        <Route path='/dashboard' element={<RutaProtegida><Dashboard/></RutaProtegida>} />
       </Routes>
     </Router>
   );

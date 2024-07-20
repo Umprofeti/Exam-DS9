@@ -113,7 +113,7 @@
 }
 
 .toggle:checked ~ .flipCardInner {
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 
 .flipCardFront,
