@@ -31,8 +31,8 @@ export const SearchForm = () => {
             </form>
             <FontAwesomeIcon
               icon={faShoppingCart}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#F1A512]"
-              onClick={() => navigate('/cart')}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#F1A512] hover:cursor-pointer"
+              onClick={() => navigate('/user/cart')}
             />
         </div>
     )

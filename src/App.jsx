@@ -12,6 +12,7 @@ import Cart from './components/Cart.jsx';
 import MetodoPago from './components/MetodoPago.jsx';
 import Orders from './components/Orders.jsx';
 import { SearchResults } from './pages/SearchResults.jsx';
+import InspectAlbum from './pages/InspectAlbum.jsx';
 
 const App = () => {
 
@@ -56,7 +57,9 @@ const App = () => {
         <Route path="/cart" element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={recommendedAlbums} />} />
         <Route path="/orders" element={<Orders orders={orders} />} />
         <Route path="/metodo-pago" element={<MetodoPago />} />
-        <Route path='/user/search/:type/:q' element={<SearchResults/>}/>
+        <Route path='/user/search/album/:q' element={<SearchResults/>}/>
+        <Route path='/user/details/album/:id' element={<InspectAlbum />}/>
+        <Route path='/user/cart' element={<Cart cartItems={cart} removeFromCart={removeFromCart} recommendedAlbums={recommendedAlbums} />}/>
       </Routes>
     </Router>
   );

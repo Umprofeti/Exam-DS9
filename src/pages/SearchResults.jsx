@@ -19,7 +19,7 @@ export function SearchResults (){
             let token = await getAccessToken()
             
             await axios.get(
-                `https://api.spotify.com/v1/search?q=${q}&type=${type}`,
+                `https://api.spotify.com/v1/search?q=${q}&type=album`,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`
